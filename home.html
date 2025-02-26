@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+    html, body {
+            height: 100%;
+            margin: 0;
+        }
+        main {
+            display: flex; 
+            align-items: center;
+            padding: 20px;
+        }
+        .intro {
+            width: 40%; 
+            height: 250px;
+            margin: 50px 50px 40px 200px;
+        }
+        img {
+            width: 300px;
+            height: 440px;
+            border: 1px solid whitesmoke;
+            border-radius: 15%;
+            margin: 5px;
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons img {
+            width: 20px; 
+            height: 20px;
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2) rotate(10deg);
+            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+        }
+        
+        .cv-container {
+            display: none; /*  hide the CV section */
+            padding: 40px;
+        }
+        /* transition for smooth appearance */
+        .cv-container.visible {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+        .cv-container h1 {
+            text-align: center;
+        }
+
+        .cv-container section {
+            margin-bottom: 20px;
+        }
+
+        .cv-container section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .cv-container section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .download-cv {
+    margin-top: 50px;
+}
+
+.download-cv h2 {
+    font-size: 24px;
+}
+
+.download-button button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+}
+
+.download-button button:hover {
+    background-color: #afabab;
+}
+#backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            display: none; /* Hidden by default */
+        }
+        #backToTop:hover {
+            background-color: #afabab;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100081507626753" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+          <a href="https://x.com/Yammie_Mak?t=NyENqDCMiS9pEic10WQoAg&s=09" target="_blank">
+            <img src="x.png" alt="Twitter">
+          </a>
+          <a href="https://www.instagram.com/yammiemakwinja?igsh=YzljYTk1ODg3Zg==" target="_blank">
+            <img src="insta.png" alt="Instagram">
+          </a>
+        </div>  
+    </header>
+
+    <main>
+        <section class="intro">
+             <h2>--- Hello!</h2>
+            <p>I'm Yamikani Immaculate Makwinja. A data analyst and full-stack developer based in Blantyre, Malawi</p>
+                <button class="button" onclick="scrollToCV()">My CV</button>
+        </section>
+        <img src="Snap.jpg" alt="profile">
+    </main>
+    <!-- CV Section -->
+    <div class="cv-container" id="cv">
+        <!-- Personal Information -->
+        <section>
+        <h2>My Curriculum Vitae (CV)</h2>
+            <h3>Personal Information</h3>
+            <p><strong>Name:</strong> Yamikani Immaculate Makwinja</p>
+            <p><strong>Email:</strong> yamikanimakwinja4@gmail.com</p>
+            <p><strong>Phone:</strong> +265 999 898778</p>
+            <p><strong>LinkedIn:</strong> Yamikani Immaculate Makwinja</p></p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h3>Education</h3>
+            <p><strong>Bachelor's Degree in Management Information systems</strong> – Malawi University of Business and Applied Sciences, 2025</p>
+        </section>
+
+        <!-- Work Experience -->
+        <section>
+            <h3>Work Experience</h3>
+            <p><strong>Software Developer Intern</strong> – XYZ Company, 2025</p>
+            <p>Developed and tested various web applications and improved software performance.</p>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h3>Skills</h3>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript, React)</li>
+                <li>Backend Development (Node.js, Python)</li>
+                <li>Database Management (SQL, MongoDB)</li>
+                <li>Version Control (Git, GitHub)</li>
+                <li>Project Management (Agile, Scrum)</li>
+                <li>Data Analysis (Microsoft excel, power bi, SQL)</li>
+                <li>Drone operation</li>
+            </ul>
+        </section>
+        <!-- Certification -->
+        <section>
+            <h3>Certification</h3>
+            <li>Certification of participation in Ethio-Malawi drone camp</li>
+            <li>Certification of completion skillsBuildUP-IBM skillsBUild </li>
+        </section>
+
+    </div>   
+    <section class="download-cv">
+        <a href="https://github.com/Yammie-63/newPort/commit/ed84d8a4688228e3ddfcbdcf6eb2533a973c7591#diff-f69c848de37ff5a0a47326a6b412f226faaf93b5c662a89ed89e3c2f349c8f47" download class="download-button">
+            <button>Download CV</button>
+        </a>
+        <div id="download-message" style="display:none; margin-top: 10px; color: green;">
+            Your CV has been successfully downloaded!
+        </div>
+    </section> 
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>  
+        <script>
+            // Function to show the CV section and scroll to it
+            function scrollToCV() {
+                var cvSection = document.getElementById('cv');
+                // Show the CV section
+                cvSection.style.display = 'block';
+                // Scroll to the CV section
+                cvSection.scrollIntoView({behavior: "smooth"});
+            }
+            //function to show the cv is downloaded successfully
+            function downloadSuccess() {
+        var message = document.getElementById('download-message');
+        message.style.display = 'block';
+        // you can hide the message after a few seconds
+        setTimeout(function() {
+            message.style.display = 'none';
+        }, 5000); // Hide the message after 5 seconds
+    }
+    // Function to scroll the page back to the top
+    function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // Show the "Back to Top" button when the user scrolls down
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+        </script>
+<footer>  
+        <p>© 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

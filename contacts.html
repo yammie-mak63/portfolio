@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+
+      main {
+        display: flex; 
+        align-items: left;
+        padding: 20px;
+      }
+      .intro {
+        width: 40%; 
+        height: 250px;
+        margin: 50px 50px 40px 100px;
+      }
+      img {
+        width: 300px;
+        height: 400px;
+        border: 1px solid whitesmoke;
+        border-radius: 15%;
+        margin: 10px;
+      }
+      .social-icons {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      .social-icons img {
+        width: 20px; 
+        height: 20px;
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+      }
+      .social-icons img:hover {
+        transform: scale(1.2) rotate(10deg);
+        filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 20px 50px 40px 300px;
+      }
+      .contact-form label {
+        margin-bottom: 5px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .contact-form button {
+        padding: 10px;
+        background-color: #b4b4b4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100081507626753" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+          <a href="https://x.com/Yammie_Mak?t=NyENqDCMiS9pEic10WQoAg&s=09" target="_blank">
+            <img src="x.png" alt="Twitter">
+          </a>
+          <a href="https://www.instagram.com/yammiemakwinja?igsh=YzljYTk1ODg3Zg==" target="_blank">
+            <img src="insta.png" alt="Instagram">
+          </a>
+        </div>  
+    </header>
+
+    <main>
+
+      <section class="contact">
+          <h1>Contact Me</h1>
+          <p>If you'd like to get in touch with me, feel free to contact me through:</p>
+          <p>📧 Email:<a href="mailto:email@example.com">yamikanimakwinja4@gmail.com</a></p>
+
+          <!-- Contact Form -->
+          <p>Or, send me a message directly:</p>
+          <form class="contact-form" id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <p id="formResponse" style="color: green; display: none;">Your message has been sent! Thank you!</p>
+          <p id="formError" style="color: red; display: none;">Oops! Something went wrong. Please try again.</p>
+      </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for form submission
+    const form = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+    const formError = document.getElementById('formError');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the form from reloading the page
+
+        // Retrieve form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here, you can send the form data to a server or email service
+        // For now, let's simulate a successful form submission
+
+        if (name && email && message) {
+            formResponse.style.display = 'block';
+            formError.style.display = 'none';
+            form.reset(); // Reset the form after submission
+        } else {
+            formResponse.style.display = 'none';
+            formError.style.display = 'block';
+        }
+    });
+   
+  </script>
+</body>
+</html>
