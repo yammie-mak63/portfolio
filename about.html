@@ -85,6 +85,22 @@
         .subsection h3:hover, .subsection p:hover {
             transform: scale(1.05);
         }
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            display: none; /* Hidden by default */
+        }
+        #backToTop:hover {
+            background-color: #afabab;
+        }
     </style>  
 </head>
 <body>
@@ -158,6 +174,14 @@
                 }, 500 * index); // Staggered delay for each subsection
             });
         });
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
