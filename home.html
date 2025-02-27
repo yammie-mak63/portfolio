@@ -95,23 +95,6 @@
         .download-button button:hover {
             background-color: #afabab;
         }
-
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
-            display: none; /* Hidden by default */
-        }
-        #backToTop:hover {
-            background-color: #afabab;
-        }
     </style>
 </head>
 <body>
@@ -148,11 +131,7 @@
             </section>
         </section>
         <img src="Snap.jpg" alt="profile">
-    </main>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>  
-
+    </main>  
     <script>
         // Function to show the CV section and scroll to it
         function scrollToCV() {
@@ -161,24 +140,6 @@
             cvSection.style.display = 'block';
             // Scroll to the CV section
             cvSection.scrollIntoView({behavior: "smooth"});
-        }
-
-        // Function to scroll the page back to the top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-
-        // Show the "Back to Top" button when the user scrolls down
-        window.onscroll = function() {
-            var backToTopButton = document.getElementById("backToTop");
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
         }
     </script>
 
